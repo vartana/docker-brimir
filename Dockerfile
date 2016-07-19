@@ -20,6 +20,7 @@ EXPOSE 3000
 RUN apt-get clean
 
 ENV RAILS_ENV production
+ENV RAILS_SERVE_STATIC_FILES true
 
 ENV DEVISE_SECRET_KEY ccaf6fd413c660bf798f5517a6278010355123171c51af97f6019dd69ed62571ee2b342aedef0b15a96ead2f1021c9ef4b4ac91fd2901cd3145965158258c39d
 RUN echo "Devise.secret_key= ENV['DEVISE_SECRET_KEY']" >> /opt/brimir/config/initializers/devise.rb
