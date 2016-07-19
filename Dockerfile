@@ -1,5 +1,5 @@
-FROM ruby:2.1
-MAINTAINER Alain Beauvois <alain@questioncode.fr>
+FROM ruby:2.2.5
+MAINTAINER Vartan Arabyan <vartana@gmail.com>
 
 RUN mkdir -p /opt
 RUN cd /opt && git clone https://github.com/ivaldi/brimir.git 
