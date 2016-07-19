@@ -3,10 +3,12 @@ db:
   environment: 
     MYSQL_ROOT_PASSWORD: mysecretpassword 
     MYSQL_DATABASE: production_brimir
+  volumes:
+    - ./database/mysql:/var/lib/mysql
 web:
   build: .
   volumes:
-    - .:/public/system
+    - ./web:/public/system
   ports:
     - "3000:3000"
   links:
